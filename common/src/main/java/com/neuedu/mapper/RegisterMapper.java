@@ -7,4 +7,5 @@ public interface RegisterMapper {
 
 	String getMaxCaseNumber();
 
+	Integer getUsedNumberByEmployeeIdAndNoon(Integer empId,String noon);
 }

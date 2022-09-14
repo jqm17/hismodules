@@ -18,6 +18,12 @@ public class RegisterServiceImpl implements RegisterService {
 		// TODO Auto-generated method stub
 		return registerMapper.getMaxCaseNumber();
 	}
+
+	@Override
+	public Integer getUsedNumberByEmployeeIdAndNoon(Integer empId, String noon) {
+		// TODO Auto-generated method stub
+		return registerMapper.getUsedNumberByEmployeeIdAndNoon(empId, noon);
+	}
 	
 	
 }

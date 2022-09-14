@@ -5,7 +5,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.neuedu.mapper.RegisterMapper">
 	<select id="getMaxCaseNumber" resultType="String">
-		SELECT MAX(case_number) FROM
+		SELECT MAX(case_number)
+		FROM
 		register
+	</select>
+	<select id="getUsedNumberByEmployeeIdAndNoon" resultType="Int">
+		SELECT
+		COUNT(*) FROM register
+		WHERE employee_id=#{empId}
+		AND noon = #{noon}
+		AND DATE(visit_date) = DATE(NOW())
+		AND visit_state &lt; 3
 	</select>
 </mapper>

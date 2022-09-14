@@ -20,4 +20,8 @@ public class RegisterController {
 		Integer num = result+1;
 		return num.toString();
 	}
+	@GetMapping("/getUsedNumberByEmployeeIdAndNoon")
+	public Integer getUsedNumberByEmployeeIdAndNoon(Integer empId, String noon) {
+		return registerService.getUsedNumberByEmployeeIdAndNoon(empId, noon);
+	}
 }
