@@ -11,6 +11,6 @@ public class TestUtil {
 	@Test
 	public  void testUtil(){
 		Date date = DateUtil.string2Date("2022-10-01");
-		System.out.println(date);
+		System.out.println("时间"+date);
 	}
 }
