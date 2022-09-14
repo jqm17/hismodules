@@ -12,5 +12,6 @@ public class TestUtil {
 	public  void testUtil(){
 		Date date = DateUtil.string2Date("2022-10-01");
 		System.out.println("时间是"+date);
+		System.out.println("测试分支");
 	}
 }
